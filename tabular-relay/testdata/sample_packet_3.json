@@ -1,0 +1,100 @@
+{
+  "header": {
+    "magic": "STMK",
+    "version": 1,
+    "timestamp": 1703097602000,
+    "frame_number": 3,
+    "session_id": "test_session_002",
+    "client_id": "test_client_002",
+    "stream_count": 2,
+    "total_size": 1536
+  },
+  "streams": [
+    {
+      "metadata": {
+        "type": "mesh",
+        "size": 768,
+        "compressed_size": 384,
+        "compression": "zlib",
+        "timestamp": 1703097602000,
+        "sequence_number": 1,
+        "extras": {
+          "anchor_count": 2
+        }
+      },
+      "data": {
+        "anchors": [
+          {
+            "id": "anchor_002",
+            "transform": [
+              [0.9, 0.0, 0.1, 1.0],
+              [0.0, 1.0, 0.0, 0.0],
+              [-0.1, 0.0, 0.9, 2.0],
+              [0.0, 0.0, 0.0, 1.0]
+            ],
+            "vertices": [
+              [0.0, 0.0, 0.0],
+              [2.0, 0.0, 0.0],
+              [1.0, 2.0, 0.0],
+              [0.0, 0.0, 1.0]
+            ],
+            "faces": [
+              [0, 1, 2],
+              [0, 2, 3]
+            ],
+            "classifications": [2, 2, 2, 2]
+          },
+          {
+            "id": "anchor_003",
+            "transform": [
+              [1.0, 0.0, 0.0, -1.0],
+              [0.0, 0.8, 0.6, 0.5],
+              [0.0, -0.6, 0.8, 1.5],
+              [0.0, 0.0, 0.0, 1.0]
+            ],
+            "vertices": [
+              [-0.5, 0.0, 0.0],
+              [0.5, 0.0, 0.0],
+              [0.0, 0.5, 0.0],
+              [0.0, 0.0, 0.5]
+            ],
+            "faces": [
+              [0, 1, 2],
+              [1, 2, 3],
+              [2, 3, 0],
+              [3, 0, 1]
+            ],
+            "classifications": [3, 3, 3, 3]
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "type": "pointCloud",
+        "size": 512,
+        "compressed_size": 256,
+        "compression": "lz4",
+        "timestamp": 1703097602000,
+        "sequence_number": 1
+      },
+      "data": {
+        "points": [
+          [0.1, 0.1, 0.1],
+          [0.2, 0.2, 0.2],
+          [0.3, 0.3, 0.3],
+          [0.4, 0.4, 0.4],
+          [0.5, 0.5, 0.5]
+        ],
+        "colors": [
+          [1.0, 0.0, 0.0],
+          [0.0, 1.0, 0.0],
+          [0.0, 0.0, 1.0],
+          [1.0, 1.0, 0.0],
+          [1.0, 0.0, 1.0]
+        ],
+        "confidence": [0.9, 0.8, 0.95, 0.7, 0.85]
+      }
+    }
+  ]
+}

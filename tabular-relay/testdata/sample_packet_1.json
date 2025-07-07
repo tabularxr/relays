@@ -1,0 +1,72 @@
+{
+  "header": {
+    "magic": "STMK",
+    "version": 1,
+    "timestamp": 1703097600000,
+    "frame_number": 1,
+    "session_id": "test_session_001",
+    "client_id": "test_client_001",
+    "stream_count": 2,
+    "total_size": 1024
+  },
+  "streams": [
+    {
+      "metadata": {
+        "type": "mesh",
+        "size": 512,
+        "compressed_size": 256,
+        "compression": "zlib",
+        "timestamp": 1703097600000,
+        "sequence_number": 1,
+        "extras": {
+          "anchor_count": 1
+        }
+      },
+      "data": {
+        "anchors": [
+          {
+            "id": "anchor_001",
+            "transform": [
+              [1.0, 0.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0, 0.0],
+              [0.0, 0.0, 1.0, 0.0],
+              [0.0, 0.0, 0.0, 1.0]
+            ],
+            "vertices": [
+              [0.0, 0.0, 0.0],
+              [1.0, 0.0, 0.0],
+              [0.5, 1.0, 0.0]
+            ],
+            "faces": [
+              [0, 1, 2]
+            ],
+            "classifications": [1, 1, 1]
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "type": "pose",
+        "size": 256,
+        "compressed_size": 128,
+        "compression": "none",
+        "timestamp": 1703097600000,
+        "sequence_number": 1
+      },
+      "data": {
+        "transform": [
+          [1.0, 0.0, 0.0, 0.1],
+          [0.0, 1.0, 0.0, 0.2],
+          [0.0, 0.0, 1.0, 0.3],
+          [0.0, 0.0, 0.0, 1.0]
+        ],
+        "euler_angles": [0.0, 0.0, 0.0],
+        "tracking_state": "normal",
+        "acceleration": [0.0, -9.81, 0.0],
+        "rotation_rate": [0.0, 0.0, 0.0],
+        "magnetic_field": [0.0, 0.0, 0.0]
+      }
+    }
+  ]
+}

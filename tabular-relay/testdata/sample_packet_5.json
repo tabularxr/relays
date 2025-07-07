@@ -1,0 +1,73 @@
+{
+  "header": {
+    "magic": "STMK",
+    "version": 1,
+    "timestamp": 1703097604000,
+    "frame_number": 5,
+    "session_id": "test_session_003",
+    "client_id": "test_client_003",
+    "stream_count": 2,
+    "total_size": 1280
+  },
+  "streams": [
+    {
+      "metadata": {
+        "type": "camera",
+        "size": 768,
+        "compressed_size": 384,
+        "compression": "jpeg",
+        "timestamp": 1703097604000,
+        "sequence_number": 1,
+        "extras": {
+          "exposure": 0.025,
+          "iso": 100
+        }
+      },
+      "data": {
+        "image_data": "another_base64_encoded_jpeg_would_be_here",
+        "format": "jpeg",
+        "width": 1280,
+        "height": 720,
+        "intrinsics": [
+          [750.0, 0.0, 640.0],
+          [0.0, 750.0, 360.0],
+          [0.0, 0.0, 1.0]
+        ],
+        "transform": [
+          [0.9, 0.0, 0.44, -0.5],
+          [0.0, 1.0, 0.0, 1.2],
+          [-0.44, 0.0, 0.9, 3.1],
+          [0.0, 0.0, 0.0, 1.0]
+        ],
+        "exposure": 0.025
+      }
+    },
+    {
+      "metadata": {
+        "type": "depth",
+        "size": 384,
+        "compressed_size": 192,
+        "compression": "lz4",
+        "timestamp": 1703097604000,
+        "sequence_number": 1
+      },
+      "data": {
+        "depth_map": [
+          [2.1, 2.3, 2.5, 2.7],
+          [1.9, 2.1, 2.3, 2.5],
+          [1.7, 1.9, 2.1, 2.3],
+          [1.5, 1.7, 1.9, 2.1]
+        ],
+        "confidence_map": [
+          [255, 255, 200, 150],
+          [255, 255, 255, 200],
+          [200, 255, 255, 255],
+          [150, 200, 255, 255]
+        ],
+        "width": 4,
+        "height": 4,
+        "depth_type": "smoothedSceneDepth"
+      }
+    }
+  ]
+}

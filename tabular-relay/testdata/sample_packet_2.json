@@ -1,0 +1,90 @@
+{
+  "header": {
+    "magic": "STMK",
+    "version": 1,
+    "timestamp": 1703097601000,
+    "frame_number": 2,
+    "session_id": "test_session_001",
+    "client_id": "test_client_001",
+    "stream_count": 3,
+    "total_size": 2048
+  },
+  "streams": [
+    {
+      "metadata": {
+        "type": "camera",
+        "size": 1024,
+        "compressed_size": 512,
+        "compression": "jpeg",
+        "timestamp": 1703097601000,
+        "sequence_number": 2,
+        "extras": {
+          "exposure": 0.033,
+          "focal_length": 28.0
+        }
+      },
+      "data": {
+        "image_data": "base64_encoded_jpeg_data_would_go_here",
+        "format": "jpeg",
+        "width": 640,
+        "height": 480,
+        "intrinsics": [
+          [525.0, 0.0, 320.0],
+          [0.0, 525.0, 240.0],
+          [0.0, 0.0, 1.0]
+        ],
+        "transform": [
+          [1.0, 0.0, 0.0, 0.1],
+          [0.0, 1.0, 0.0, 0.2],
+          [0.0, 0.0, 1.0, 0.3],
+          [0.0, 0.0, 0.0, 1.0]
+        ],
+        "exposure": 0.033
+      }
+    },
+    {
+      "metadata": {
+        "type": "depth",
+        "size": 512,
+        "compressed_size": 256,
+        "compression": "lz4",
+        "timestamp": 1703097601000,
+        "sequence_number": 2
+      },
+      "data": {
+        "depth_map": [
+          [1.5, 1.6, 1.7],
+          [1.4, 1.5, 1.6],
+          [1.3, 1.4, 1.5]
+        ],
+        "confidence_map": [
+          [255, 200, 150],
+          [255, 255, 200],
+          [200, 255, 255]
+        ],
+        "width": 3,
+        "height": 3,
+        "depth_type": "sceneDepth"
+      }
+    },
+    {
+      "metadata": {
+        "type": "lighting",
+        "size": 256,
+        "compressed_size": 128,
+        "compression": "none",
+        "timestamp": 1703097601000,
+        "sequence_number": 2
+      },
+      "data": {
+        "ambient_intensity": 0.8,
+        "ambient_color_temperature": 6500.0,
+        "directional_light": {
+          "intensity": 0.5,
+          "direction": [0.0, -1.0, 0.0]
+        },
+        "spherical_harmonics": [0.8, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+      }
+    }
+  ]
+}
