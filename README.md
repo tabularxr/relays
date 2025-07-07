@@ -1,6 +1,6 @@
-# Tabular Relays
+# Relays
 
-A collection of intelligent relay services for real-time spatial data processing and transformation within Tabular's ecosystem.
+Intelligent data transformation & transmission services for real-time spatial data processing within the Tabular ecosystem.
 
 ## Overview
 
