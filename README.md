@@ -4,7 +4,7 @@ Intelligent data transformation & transmission services for real-time spatial da
 
 ## Overview
 
-Relays are **intelligent processing intermediaries** that transform raw spatial data streams into meaningful, enriched events. They serve as the critical bridge between data producers (like AR/VR devices running StreamKit) and data consumers (like the Stags spatial processing system).
+Relays are **intelligent processing intermediaries** that transform raw spatial data streams into meaningful, enriched events. They serve as the critical bridge between data producers (like AR/VR devices running StreamKit) and data consumers (Stags).
 
 Unlike simple proxy services, relays contain sophisticated transformation logic that:
 - Decompresses and parses binary data streams
