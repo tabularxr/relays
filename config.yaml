@@ -1,0 +1,15 @@
+server:
+  port: "8080"
+  host: "0.0.0.0"
+
+stag:
+  url: "http://localhost:8081"
+  timeout: "10s"
+
+websocket:
+  buffer_size: 1024
+  heartbeat_interval: "30s"
+
+batch:
+  max_size: 5
+  timeout: "100ms"

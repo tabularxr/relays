@@ -1,0 +1,73 @@
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+
+# Go mod cache
+go.sum
+
+# Binary output
+/bin/
+/dist/
+/build/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Test coverage
+coverage.txt
+coverage.html
+*.cover
+
+# Docker
+Dockerfile.local
+docker-compose.override.yml
+
+# Configuration files that might contain secrets
+config.local.yaml
+config.prod.yaml
+*.pem
+*.key
+*.crt
+
+# Metrics and profiling
+*.prof
+*.pprof
+
+# Vendor directory (if using vendor)
+vendor/
+
+# Local development
+.local/
+tmp/
