@@ -7,9 +7,11 @@
 *.test
 *.out
 go.work
+go.work.sum
 
-# Go mod cache
-go.sum
+# Go build artifacts
+relay
+/relay
 
 # Binary output
 /bin/
@@ -48,6 +50,11 @@ logs/
 # Test coverage
 coverage.txt
 coverage.html
+coverage.out
+coverage.xml
+coverage.json
+c.out
+profile.out
 *.cover
 
 # Docker
@@ -71,3 +78,14 @@ vendor/
 # Local development
 .local/
 tmp/
+.cache/
+
+# Development tools
+.air.toml
+air_tmp/
+.task/
+.golangci.yml
+
+# Package management
+/pkg/mod/
+node_modules/

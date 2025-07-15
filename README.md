@@ -246,27 +246,30 @@ The relay exposes metrics at `/metrics`:
 
 The included `docker-compose.yml` provides:
 
-- **Relay service** with health checks
-- **Mock STAG service** for testing
+- **Relay service** with health checks (runs independently)
 - **Prometheus** for metrics collection
 - **Networking** configured for service communication
+
+**Note**: The relay service runs independently and does not require STAG to be running. It will gracefully handle STAG being unavailable and attempt to reconnect when STAG becomes available.
 
 ### Configuration
 
 For production deployment:
 
-1. Update `config.yaml` with production STAG URL
+1. Update `config.yaml` with production STAG URL (default: `http://host.docker.internal:8080`)
 2. Set appropriate batch sizes and timeouts
 3. Configure proper logging levels
 4. Set up monitoring and alerting on metrics
 5. Configure load balancing for multiple instances
+
+**STAG URL Configuration**: By default, the relay connects to STAG at `http://host.docker.internal:8080` when running in Docker, allowing it to reach STAG running on the host machine. For production, update this to your actual STAG service URL.
 
 ### Environment Variables
 
 Key production environment variables:
 
 ```bash
-RELAY_STAG_URL=https://stag-production.example.com
+RELAY_STAG_URL=http://host.docker.internal:8080  # Default for Docker
 RELAY_BATCH_MAX_SIZE=50
 RELAY_BATCH_TIMEOUT=500ms
 RELAY_WEBSOCKET_BUFFER_SIZE=4096
