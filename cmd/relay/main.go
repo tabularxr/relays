@@ -82,9 +82,9 @@ func loadConfig() *types.Config {
 	viper.AddConfigPath("/etc/relay/")
 	
 	// Set defaults
-	viper.SetDefault("server.port", "8080")
+	viper.SetDefault("server.port", "8081")
 	viper.SetDefault("server.host", "0.0.0.0")
-	viper.SetDefault("stag.url", "http://localhost:8081")
+	viper.SetDefault("stag.url", "http://localhost:8080")
 	viper.SetDefault("stag.timeout", "10s")
 	viper.SetDefault("websocket.buffer_size", 1024)
 	viper.SetDefault("websocket.heartbeat_interval", "30s")

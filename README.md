@@ -79,11 +79,11 @@ The relay can be configured via:
 1. **Configuration file** (`config.yaml`):
 ```yaml
 server:
-  port: "8080"
+  port: "8081"
   host: "0.0.0.0"
 
 stag:
-  url: "http://localhost:8081"
+  url: "http://localhost:8080"
   timeout: "10s"
 
 websocket:
@@ -98,7 +98,7 @@ batch:
 2. **Environment variables** (prefixed with `RELAY_`):
 ```bash
 export RELAY_SERVER_PORT=8080
-export RELAY_STAG_URL=http://stag-service:8081
+export RELAY_STAG_URL=http://stag-service:8080
 export RELAY_BATCH_MAX_SIZE=10
 ```
 
@@ -289,7 +289,7 @@ RELAY_WEBSOCKET_BUFFER_SIZE=4096
    - Check network connectivity
 
 2. **WebSocket Connection Issues**
-   - Verify port 8080 is accessible
+   - Verify port 8081 is accessible
    - Check firewall settings
    - Validate WebSocket upgrade headers
 
@@ -307,12 +307,12 @@ RELAY_WEBSOCKET_BUFFER_SIZE=4096
 
 2. **Check Metrics**:
    ```bash
-   curl http://localhost:8080/metrics
+   curl http://localhost:8081/metrics
    ```
 
 3. **View Health Status**:
    ```bash
-   curl http://localhost:8080/health
+   curl http://localhost:8081/health
    ```
 
 ## Contributing
